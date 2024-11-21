@@ -1,0 +1,39 @@
+from random import *
+
+num=randrange(1000,10000)
+print(num)
+n=int(input("Enter a number: "))
+
+if num==n:
+    print("wow u gess correctly in one chance u are real mastermind \n ")
+    exit(0)
+
+else:
+    cnt = 0
+    while num!=n:
+
+
+        cnt+=1
+        count=0
+        n=str(n)
+        num=str(num)
+        correct=['x']*4
+        for i in range(4):
+            if n[i]==num[i]:
+                count+=1
+                correct[i]=n[i]
+            else:
+                continue
+        print("dont quicte u guess ",count," correctly")
+        print("\n")
+        print(" camparition with the number is ",' '.join(correct))
+
+
+
+
+        if num==n:
+            print("\n you gusseds the number \n you gussed the number in ",cnt," chances ")
+            print("\n you became the mastermind ")
+            break
+
+        n = int(input("enter your next choice >>"))
